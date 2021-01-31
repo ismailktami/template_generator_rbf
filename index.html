@@ -1,46 +1,71 @@
 <!DOCTYPE html>
-<html ng-app='AppModel'  ng-controller="MainController">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../../css/main.css">
-    </head>
-    <script type="text/javascript" src="../../js/lib/angularJs.js"></script>
-    <script type="text/javascript" src="../app.js"></script>
-    <script type="text/javascript" src="../../js/lib/jquery.js"> </script>
-    <script type="text/javascript" src="../../css/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        setTimeout(function(){
-            document.getElementsByClassName("loader")[0].remove();
-            document.getElementById("container_keywords").style.display="block";
-        },2000);  
-    </script>
-<body>ss
+<html ng-app="AppModel" ng-controller="MainController">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../css/main.css" />
+  </head>
+  <script type="text/javascript" src="../../js/lib/angularJs.js"></script>
+  <script type="text/javascript" src="../app.js"></script>
+  <script type="text/javascript" src="../../js/lib/jquery.js"></script>
+  <script type="text/javascript" src="../../css/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    setTimeout(function () {
+      document.getElementsByClassName("loader")[0].remove();
+      document.getElementById("container_keywords").style.display = "block";
+    }, 2000);
+  </script>
+  <body>
     <!-- Loader -->
     <div class="loader">
-    <div class="inner one"></div>
-    <div class="inner two"></div>
-    <div class="inner three"></div>
+      <div class="inner one"></div>
+      <div class="inner two"></div>
+      <div class="inner three"></div>
     </div>
-<div id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <div id="navbar">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          style="font-family: Verdana, Geneva, Tahoma, sans-serif"
+        >
           RBFGenerator
         </a>
-        <button class="navbar-toggler ml-auto "  type="button" data-toggle="collapse" 
-          data-target="#navbarColor01" 
-          aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a  href="configuration.html" class="navbar-toggler navbar-brand ml-auto" style="margin-left: 5px !important;margin-right: 5px;">
-          <i class="fa fa-cog" style="color: white;cursor: pointer;font-size: 30px;"></i>
+        <a
+          href="configuration.html"
+          class="navbar-toggler navbar-brand ml-auto"
+          style="margin-left: 5px !important; margin-right: 5px"
+        >
+          <i
+            class="fa fa-cog"
+            style="color: white; cursor: pointer; font-size: 30px"
+          ></i>
         </a>
-        <a  href="#" class="navbar-toggler navbar-brand ml-auto" style="margin-left: 5px !important;">
-          <i class="fa fa-power-off" style="color: rgb(180, 60, 60);cursor: pointer;font-size: 30px;"></i>
+        <a
+          href="#"
+          class="navbar-toggler navbar-brand ml-auto"
+          style="margin-left: 5px !important"
+        >
+          <i
+            class="fa fa-power-off"
+            style="color: rgb(180, 60, 60); cursor: pointer; font-size: 30px"
+          ></i>
         </a>
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="home.html">Home
+              <a class="nav-link" href="home.html"
+                >Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -54,7 +79,15 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <a
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Dropdown</a
+              >
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
@@ -64,111 +97,247 @@
               </div>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0 d-sm-none d-xs-none d-md-none d-lg-block ">
-            <a href="configuration.html" style="margin-right: 15px;">
-              <i class="fa fa-cog fa-2x" style="color: white;cursor: pointer;"></i>
+          <form
+            class="form-inline my-2 my-lg-0 d-sm-none d-xs-none d-md-none d-lg-block"
+          >
+            <a href="configuration.html" style="margin-right: 15px">
+              <i
+                class="fa fa-cog fa-2x"
+                style="color: white; cursor: pointer"
+              ></i>
             </a>
-            <a  href="#">
-              <i class="fa fa-power-off fa-2x" style="color:rgb(219, 76, 76);cursor: pointer;"></i>
+            <a href="#">
+              <i
+                class="fa fa-power-off fa-2x"
+                style="color: rgb(219, 76, 76); cursor: pointer"
+              ></i>
             </a>
           </form>
         </div>
       </nav>
-</div>
+    </div>
 
-<div id="container_keywords" style="display: none;">
-<div class="row" style="margin-top: 100px;">
-
-      <div class="col-3 col-md-3 col-sm-11" style="margin-left: 20px;">
+    <div id="container_keywords" style="display: none">
+      <div class="row" style="margin-top: 100px">
+        <div class="col-3 col-md-3 col-sm-11" style="margin-left: 20px">
           <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action active" >
-                Cras justo odio
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">Morbi leo risus
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac
-              </a>
-            </div>
-    
-      </div>
-
-<div class="col-7 col-sm-11 col-md-8 col-lg-7" style="margin-left:20px ;">
-    <div class="accordion" id="accordionKeywords">
-      <div class="card">
-        <div class="card-header" id="headingThree" style="padding-right: 0px;">
-              <a class="btn btn-block text-left collapsed collapse-keyword"
-                type="button" data-toggle="collapse" data-target="#collapseThree"
-                 aria-expanded="false" aria-controls="collapseThree">
-                 Cras justo odio
-                <i class="fa fa-trash" style="float: right;color: #f04545;font-size: 20px;"></i>
-                <i class="fa fa-cog" style="float: right;color: #3198dd;font-size: 20px; margin-right: 10px;"></i>
-              </a>
+            <a href="#" class="list-group-item list-group-item-action active">
+              Cras justo odio
+            </a>
+            <a href="#" class="list-group-item list-group-item-action"
+              >Dapibus ac facilisis in
+            </a>
+            <a href="#" class="list-group-item list-group-item-action"
+              >Morbi leo risus
+            </a>
+            <a href="#" class="list-group-item list-group-item-action"
+              >Porta ac consectetur ac
+            </a>
+          </div>
         </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionKeywords">
-          <div class="card-body">
-            <div class="documentaion">
-              <div class="form-group">
-                <label for="exampleTextarea">Documentation</label>
-                <textarea style="display: none;" class="form-control" id="exampleTextarea" rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 80px;"></textarea>
+
+        <div
+          class="col-7 col-sm-11 col-md-8 col-lg-7"
+          style="margin-left: 20px"
+        >
+          <div class="accordion" id="accordionKeywords">
+            <div class="card">
+              <div
+                class="card-header"
+                id="headingThree"
+                style="padding-right: 0px"
+              >
+                <a
+                  class="btn btn-block text-left collapsed collapse-keyword"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Cras justo odio
+                  <i
+                    class="fa fa-trash"
+                    style="float: right; color: #f04545; font-size: 20px"
+                  ></i>
+                  <i
+                    class="fa fa-cog"
+                    style="
+                      float: right;
+                      color: #3198dd;
+                      font-size: 20px;
+                      margin-right: 10px;
+                    "
+                  ></i>
+                </a>
               </div>
-            </div>
-              <div class="card">
-                  <div class="card-header steps">
-                    <a data-toggle="collapse" data-target="#collapseExample3" 
-                    style="cursor: pointer;"
-                    aria-expanded="false" aria-controls="collapseExample">
-                      Steps
-                    </a>
+              <div
+                id="collapseThree"
+                class="collapse"
+                aria-labelledby="headingThree"
+                data-parent="#accordionKeywords"
+              >
+                <div class="card-body">
+                  <div class="documentaion">
+                    <div class="form-group">
+                      <label for="exampleTextarea">Documentation</label>
+                      <textarea
+                        style="display: none"
+                        class="form-control"
+                        id="exampleTextarea"
+                        rows="3"
+                        style="
+                          margin-top: 0px;
+                          margin-bottom: 0px;
+                          height: 80px;
+                        "
+                      ></textarea>
+                    </div>
                   </div>
-                  <div class="collapse" id="collapseExample3">
-                  <div class="card-body">
-                      <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center step">
-                          <div class="row" style="width: 100%;margin-left: 20px;">
-                            <div class="col-10">
-                            <div class="form-group">
-                               <div class="row">
-                                   <div class="col-sm-12 col-md-12 col-lg-6  align-self-center" style="margin-top: 10px;">
-                                    <div class="input-group input-group-sm mb-3">
-                                      <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm">Action</span>
-                                      </div>
-                                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                    </div>
-                                    <div class="input-group input-group-sm mb-3">
-                                      <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm">Xpath</span>
-                                      </div>
-                                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                    </div>
-                                   </div>
-                                   <div class="col-sm-6  col-md-6 col-lg-3 align-self-center">
-                                    <div class="custom-control custom-checkbox">
-                                      <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                      <label class="custom-control-label" for="customCheck1">Check this</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                      <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                      <label class="custom-control-label" for="customCheck1">Check this</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                      <input type="checkbox" class="custom-control-input" id="customCheck2" >
-                                      <label class="custom-control-label" for="customCheck2">Disabled </label>
-                                    </div>
-                                   </div>
-                                   <div class="col-sm-6 col-md-6 col-lg-3 align-self-center" >
-                                        <div class="custom-control custom-radio">
-                                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
-                                          <label class="custom-control-label" for="customRadio1">Toggle this cus</label>
+                  <div class="card">
+                    <div class="card-header steps">
+                      <a
+                        data-toggle="collapse"
+                        data-target="#collapseExample3"
+                        style="cursor: pointer"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                      >
+                        Steps
+                      </a>
+                    </div>
+                    <div class="collapse" id="collapseExample3">
+                      <div class="card-body">
+                        <ul class="list-group">
+                          <li
+                            class="list-group-item d-flex justify-content-between align-items-center step"
+                          >
+                            <div
+                              class="row"
+                              style="width: 100%; margin-left: 20px"
+                            >
+                              <div class="col-10">
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div
+                                      class="col-sm-12 col-md-12 col-lg-6 align-self-center"
+                                      style="margin-top: 10px"
+                                    >
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Action</span
+                                          >
                                         </div>
-                                        <div class="custom-control custom-radio">
-                                          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                          <label class="custom-control-label" for="customRadio2">Or toggle this </label>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Xpath</span
+                                          >
+                                        </div>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
                                     </div>
-                                </div>
-<!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck2"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck2"
+                                          >Disabled
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio1"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio1"
+                                          >Toggle this cus</label
+                                        >
+                                      </div>
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio2"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio2"
+                                          >Or toggle this
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
                                   <div class="actions">
                                     <a href="#" class="card-link" style="color: 
                                     rgb(95, 180, 236);font-family: Verdana, Geneva, Tahoma, sans-serif;">
@@ -179,56 +348,140 @@
                                      Remove</a>
                                   </div>
                                   </div> -->
-                               </div>                                
+                                  </div>
+                                </div>
                               </div>
                             </div>
-
-                            </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center step">
-                              <div class="row" style="width: 100%;margin-left: 20px;">
-                                <div class="col-10">
+                          </li>
+                          <li
+                            class="list-group-item d-flex justify-content-between align-items-center step"
+                          >
+                            <div
+                              class="row"
+                              style="width: 100%; margin-left: 20px"
+                            >
+                              <div class="col-10">
                                 <div class="form-group">
-                                   <div class="row">
-                                       <div class="col-sm-12 col-md-12 col-lg-6  align-self-center" style="margin-top: 10px;">
-                                        <div class="input-group input-group-sm mb-3">
-                                          <div class="input-group-prepend">
-                                            <span class="input-group-text" id="inputGroup-sizing-sm">Action</span>
-                                          </div>
-                                          <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                  <div class="row">
+                                    <div
+                                      class="col-sm-12 col-md-12 col-lg-6 align-self-center"
+                                      style="margin-top: 10px"
+                                    >
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Action</span
+                                          >
                                         </div>
-                                        <div class="input-group input-group-sm mb-3">
-                                          <div class="input-group-prepend">
-                                            <span class="input-group-text" id="inputGroup-sizing-sm">Xpath</span>
-                                          </div>
-                                          <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Xpath</span
+                                          >
                                         </div>
-                                       </div>
-                                       <div class="col-sm-6  col-md-6 col-lg-3 align-self-center">
-                                        <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                          <label class="custom-control-label" for="customCheck1">Check this</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                          <label class="custom-control-label" for="customCheck1">Check this</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="customCheck2" >
-                                          <label class="custom-control-label" for="customCheck2">Disabled </label>
-                                        </div>
-                                       </div>
-                                       <div class="col-sm-6 col-md-6 col-lg-3 align-self-center" >
-                                            <div class="custom-control custom-radio">
-                                              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
-                                              <label class="custom-control-label" for="customRadio1">Toggle this cus</label>
-                                            </div>
-                                            <div class="custom-control custom-radio">
-                                              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                              <label class="custom-control-label" for="customRadio2">Or toggle this </label>
-                                        </div>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
                                     </div>
-<!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck2"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck2"
+                                          >Disabled
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio1"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio1"
+                                          >Toggle this cus</label
+                                        >
+                                      </div>
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio2"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio2"
+                                          >Or toggle this
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
                                       <div class="actions">
                                         <a href="#" class="card-link" style="color: 
                                         rgb(95, 180, 236);font-family: Verdana, Geneva, Tahoma, sans-serif;">
@@ -239,56 +492,140 @@
                                          Remove</a>
                                       </div>
                                       </div> -->
-                                   </div>                                
                                   </div>
                                 </div>
-
-                                </div>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center step">
-                                  <div class="row" style="width: 100%;margin-left: 20px;">
-                                    <div class="col-10">
-                                    <div class="form-group">
-                                       <div class="row">
-                                           <div class="col-sm-12 col-md-12 col-lg-6  align-self-center" style="margin-top: 10px;">
-                                            <div class="input-group input-group-sm mb-3">
-                                              <div class="input-group-prepend">
-                                                <span class="input-group-text" id="inputGroup-sizing-sm">Action</span>
-                                              </div>
-                                              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
-                                            <div class="input-group input-group-sm mb-3">
-                                              <div class="input-group-prepend">
-                                                <span class="input-group-text" id="inputGroup-sizing-sm">Xpath</span>
-                                              </div>
-                                              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
-                                           </div>
-                                           <div class="col-sm-6  col-md-6 col-lg-3 align-self-center">
-                                            <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                              <label class="custom-control-label" for="customCheck1">Check this</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                              <label class="custom-control-label" for="customCheck1">Check this</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="customCheck2" >
-                                              <label class="custom-control-label" for="customCheck2">Disabled </label>
-                                            </div>
-                                           </div>
-                                           <div class="col-sm-6 col-md-6 col-lg-3 align-self-center" >
-                                                <div class="custom-control custom-radio">
-                                                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
-                                                  <label class="custom-control-label" for="customRadio1">Toggle this cus</label>
-                                                </div>
-                                                <div class="custom-control custom-radio">
-                                                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                                  <label class="custom-control-label" for="customRadio2">Or toggle this </label>
-                                            </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item d-flex justify-content-between align-items-center step"
+                          >
+                            <div
+                              class="row"
+                              style="width: 100%; margin-left: 20px"
+                            >
+                              <div class="col-10">
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div
+                                      class="col-sm-12 col-md-12 col-lg-6 align-self-center"
+                                      style="margin-top: 10px"
+                                    >
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Action</span
+                                          >
                                         </div>
-    <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Xpath</span
+                                          >
+                                        </div>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck2"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck2"
+                                          >Disabled
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio1"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio1"
+                                          >Toggle this cus</label
+                                        >
+                                      </div>
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio2"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio2"
+                                          >Or toggle this
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
                                           <div class="actions">
                                             <a href="#" class="card-link" style="color: 
                                             rgb(95, 180, 236);font-family: Verdana, Geneva, Tahoma, sans-serif;">
@@ -299,56 +636,140 @@
                                              Remove</a>
                                           </div>
                                           </div> -->
-                                       </div>                                
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item d-flex justify-content-between align-items-center step"
+                          >
+                            <div
+                              class="row"
+                              style="width: 100%; margin-left: 20px"
+                            >
+                              <div class="col-10">
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div
+                                      class="col-sm-12 col-md-12 col-lg-6 align-self-center"
+                                      style="margin-top: 10px"
+                                    >
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Action</span
+                                          >
+                                        </div>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Xpath</span
+                                          >
+                                        </div>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
                                       </div>
                                     </div>
-  
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck2"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck2"
+                                          >Disabled
+                                        </label>
+                                      </div>
                                     </div>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center step">
-                                      <div class="row" style="width: 100%;margin-left: 20px;">
-                                        <div class="col-10">
-                                        <div class="form-group">
-                                           <div class="row">
-                                               <div class="col-sm-12 col-md-12 col-lg-6  align-self-center" style="margin-top: 10px;">
-                                                <div class="input-group input-group-sm mb-3">
-                                                  <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="inputGroup-sizing-sm">Action</span>
-                                                  </div>
-                                                  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                                </div>
-                                                <div class="input-group input-group-sm mb-3">
-                                                  <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="inputGroup-sizing-sm">Xpath</span>
-                                                  </div>
-                                                  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                                </div>
-                                               </div>
-                                               <div class="col-sm-6  col-md-6 col-lg-3 align-self-center">
-                                                <div class="custom-control custom-checkbox">
-                                                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                                  <label class="custom-control-label" for="customCheck1">Check this</label>
-                                                </div>
-                                                <div class="custom-control custom-checkbox">
-                                                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                                  <label class="custom-control-label" for="customCheck1">Check this</label>
-                                                </div>
-                                                <div class="custom-control custom-checkbox">
-                                                  <input type="checkbox" class="custom-control-input" id="customCheck2" >
-                                                  <label class="custom-control-label" for="customCheck2">Disabled </label>
-                                                </div>
-                                               </div>
-                                               <div class="col-sm-6 col-md-6 col-lg-3 align-self-center" >
-                                                    <div class="custom-control custom-radio">
-                                                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
-                                                      <label class="custom-control-label" for="customRadio1">Toggle this cus</label>
-                                                    </div>
-                                                    <div class="custom-control custom-radio">
-                                                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                                      <label class="custom-control-label" for="customRadio2">Or toggle this </label>
-                                                </div>
-                                            </div>
-        <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio1"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio1"
+                                          >Toggle this cus</label
+                                        >
+                                      </div>
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio2"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio2"
+                                          >Or toggle this
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
                                               <div class="actions">
                                                 <a href="#" class="card-link" style="color: 
                                                 rgb(95, 180, 236);font-family: Verdana, Geneva, Tahoma, sans-serif;">
@@ -359,56 +780,140 @@
                                                  Remove</a>
                                               </div>
                                               </div> -->
-                                           </div>                                
-                                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item d-flex justify-content-between align-items-center step"
+                          >
+                            <div
+                              class="row"
+                              style="width: 100%; margin-left: 20px"
+                            >
+                              <div class="col-10">
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div
+                                      class="col-sm-12 col-md-12 col-lg-6 align-self-center"
+                                      style="margin-top: 10px"
+                                    >
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Action</span
+                                          >
                                         </div>
-      
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Xpath</span
+                                          >
                                         </div>
-                                        </li>
-                                        <li class="list-group-item d-flex justify-content-between align-items-center step">
-                                          <div class="row" style="width: 100%;margin-left: 20px;">
-                                            <div class="col-10">
-                                            <div class="form-group">
-                                               <div class="row">
-                                                   <div class="col-sm-12 col-md-12 col-lg-6  align-self-center" style="margin-top: 10px;">
-                                                    <div class="input-group input-group-sm mb-3">
-                                                      <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="inputGroup-sizing-sm">Action</span>
-                                                      </div>
-                                                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                                    </div>
-                                                    <div class="input-group input-group-sm mb-3">
-                                                      <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="inputGroup-sizing-sm">Xpath</span>
-                                                      </div>
-                                                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                                    </div>
-                                                   </div>
-                                                   <div class="col-sm-6  col-md-6 col-lg-3 align-self-center">
-                                                    <div class="custom-control custom-checkbox">
-                                                      <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                                      <label class="custom-control-label" for="customCheck1">Check this</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                      <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                                      <label class="custom-control-label" for="customCheck1">Check this</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                      <input type="checkbox" class="custom-control-input" id="customCheck2" >
-                                                      <label class="custom-control-label" for="customCheck2">Disabled </label>
-                                                    </div>
-                                                   </div>
-                                                   <div class="col-sm-6 col-md-6 col-lg-3 align-self-center" >
-                                                        <div class="custom-control custom-radio">
-                                                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
-                                                          <label class="custom-control-label" for="customRadio1">Toggle this cus</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio">
-                                                          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                                          <label class="custom-control-label" for="customRadio2">Or toggle this </label>
-                                                    </div>
-                                                </div>
-            <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck2"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck2"
+                                          >Disabled
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio1"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio1"
+                                          >Toggle this cus</label
+                                        >
+                                      </div>
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio2"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio2"
+                                          >Or toggle this
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
                                                   <div class="actions">
                                                     <a href="#" class="card-link" style="color: 
                                                     rgb(95, 180, 236);font-family: Verdana, Geneva, Tahoma, sans-serif;">
@@ -419,56 +924,140 @@
                                                      Remove</a>
                                                   </div>
                                                   </div> -->
-                                               </div>                                
-                                              </div>
-                                            </div>
-          
-                                            </div>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center step">
-                                              <div class="row" style="width: 100%;margin-left: 20px;">
-                                                <div class="col-10">
-                                                <div class="form-group">
-                                                   <div class="row">
-                                                       <div class="col-sm-12 col-md-12 col-lg-6  align-self-center" style="margin-top: 10px;">
-                                                        <div class="input-group input-group-sm mb-3">
-                                                          <div class="input-group-prepend">
-                                                            <span class="input-group-text" id="inputGroup-sizing-sm">Action</span>
-                                                          </div>
-                                                          <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                                        </div>
-                                                        <div class="input-group input-group-sm mb-3">
-                                                          <div class="input-group-prepend">
-                                                            <span class="input-group-text" id="inputGroup-sizing-sm">Xpath</span>
-                                                          </div>
-                                                          <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                                        </div>
-                                                       </div>
-                                                       <div class="col-sm-6  col-md-6 col-lg-3 align-self-center">
-                                                        <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                                          <label class="custom-control-label" for="customCheck1">Check this</label>
-                                                        </div>
-                                                        <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                                                          <label class="custom-control-label" for="customCheck1">Check this</label>
-                                                        </div>
-                                                        <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="customCheck2" >
-                                                          <label class="custom-control-label" for="customCheck2">Disabled </label>
-                                                        </div>
-                                                       </div>
-                                                       <div class="col-sm-6 col-md-6 col-lg-3 align-self-center" >
-                                                            <div class="custom-control custom-radio">
-                                                              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
-                                                              <label class="custom-control-label" for="customRadio1">Toggle this cus</label>
-                                                            </div>
-                                                            <div class="custom-control custom-radio">
-                                                              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                                              <label class="custom-control-label" for="customRadio2">Or toggle this </label>
-                                                        </div>
-                                                    </div>
-                <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="list-group-item d-flex justify-content-between align-items-center step"
+                          >
+                            <div
+                              class="row"
+                              style="width: 100%; margin-left: 20px"
+                            >
+                              <div class="col-10">
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div
+                                      class="col-sm-12 col-md-12 col-lg-6 align-self-center"
+                                      style="margin-top: 10px"
+                                    >
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Action</span
+                                          >
+                                        </div>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                      <div
+                                        class="input-group input-group-sm mb-3"
+                                      >
+                                        <div class="input-group-prepend">
+                                          <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-sm"
+                                            >Xpath</span
+                                          >
+                                        </div>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          aria-label="Small"
+                                          aria-describedby="inputGroup-sizing-sm"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck1"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck1"
+                                          >Check this</label
+                                        >
+                                      </div>
+                                      <div
+                                        class="custom-control custom-checkbox"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          class="custom-control-input"
+                                          id="customCheck2"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customCheck2"
+                                          >Disabled
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-sm-6 col-md-6 col-lg-3 align-self-center"
+                                    >
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio1"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                          checked=""
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio1"
+                                          >Toggle this cus</label
+                                        >
+                                      </div>
+                                      <div class="custom-control custom-radio">
+                                        <input
+                                          type="radio"
+                                          id="customRadio2"
+                                          name="customRadio"
+                                          class="custom-control-input"
+                                        />
+                                        <label
+                                          class="custom-control-label"
+                                          for="customRadio2"
+                                          >Or toggle this
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <!--                                     <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
                                                       <div class="actions">
                                                         <a href="#" class="card-link" style="color: 
                                                         rgb(95, 180, 236);font-family: Verdana, Geneva, Tahoma, sans-serif;">
@@ -479,25 +1068,22 @@
                                                          Remove</a>
                                                       </div>
                                                       </div> -->
-                                                   </div>                                
-                                                  </div>
-                                                </div>
-              
-                                                </div>
-                                                </li>
-                                                
-                            </ul>  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
           </div>
+          <!-- Pages END-->
         </div>
       </div>
-      </div>
-      <!-- Pages END-->
-</div>    
-</div>
-</div>
-
-    </body>
+    </div>
+  </body>
 </html>
