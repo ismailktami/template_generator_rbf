@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../css/main.css">
+    </head>
+    <script type="text/javascript" src="../../js/lib/angularJs.js"></script>
+    <script type="text/javascript" src="../app.js"></script>
+    <script type="text/javascript" src="../../js/lib/jquery.js"> </script>
+    <script type="text/javascript" src="../../css/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        setTimeout(function(){
+            document.getElementsByClassName("loader")[0].remove();
+            document.getElementById("container_home").style.display="block";
+        },2000);  
+    </script>
+
+<body>
+    <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+        </div>
+        <div id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="index.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">RBFGenerator</a>
+                <button class="navbar-toggler ml-auto "  type="button" data-toggle="collapse" 
+                  data-target="#navbarColor01" 
+                  aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="configuration.html" class="navbar-toggler navbar-brand ml-auto" style="margin-left: 5px !important;">
+                  <i class="fa fa-cog" style="color: white;cursor: pointer;font-size: 30px;"></i>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="home.html">Home
+                        <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0 d-sm-none d-xs-none d-md-none d-lg-block ">
+                    <a href="configuration.html">
+                      <i class="fa fa-cog fa-2x" style="color: white;cursor: pointer;"></i>
+                    </a>
+                          </form>
+                </div>
+              </nav>
+        </div>
+<div id="container_home" style="display: none;">
+    <div class="jumbotron">
+        <h1 class="display-3">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+    </div>
+</body>
+</html>
