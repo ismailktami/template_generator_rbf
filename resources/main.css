@@ -1,0 +1,81 @@
+@import "loading.css";
+@import "bootstrap.min.css";
+@import "_bootswatch.scss";
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  background-color: #77889921;
+}
+.title {
+  background-color: #222222;
+  width: 100%;
+  padding: 10px;
+}
+
+.title > h1 {
+  color: azure;
+  font-weight: 100;
+  margin: 0;
+}
+#navbar {
+  margin-bottom: 40px;
+}
+div.card > div.card-header {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+div.steps {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  color: #008cba;
+}
+div.d-flex > input {
+  height: 20px;
+}
+li.list-group-item {
+  padding-top: 8px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+div.actions {
+  margin-top: 10px !important;
+}
+
+#accordionKeywords > div.card {
+  margin-bottom: 5px;
+}
+.collapse-keyword {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #008cba !important;
+}
+@media (max-width: 767px) {
+  #accordionKeywords {
+    margin-top: 15px;
+  }
+}
+
+li.step {
+  margin-bottom: 3px;
+}
+
+@media (max-width: 1000px) {
+  #form-config2 {
+    margin-top: 50px;
+  }
+  #form-config3 {
+    margin-top: 50px;
+  }
+}
+.btn-view {
+  background-color: #008cba;
+  color: white;
+}
+.btn-edit {
+}

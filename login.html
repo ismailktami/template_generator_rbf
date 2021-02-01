@@ -1,9 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="resources/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
   </head>
-  <body></body>
+  <body>
+    <div
+      class="modal fade show"
+      id="myModal"
+      role="dialog"
+      style="display: block"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header text-center"
+            style="padding: 35px 50px; background: #008cba"
+          >
+            <h3 class="modal-title" style="color: white; margin: 0 auto">
+              Login
+            </h3>
+            <br />
+          </div>
+          <div class="modal-body" style="padding: 40px 50px">
+            <form>
+              <div class="form-group">
+                <label for="username"
+                  ><span class="glyphicon glyphicon-user"></span>
+                  Username</label
+                ><input
+                  class="form-control"
+                  id="username"
+                  placeholder="Enter username"
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password"
+                  ><span class="glyphicon glyphicon-eye-open"></span>
+                  Password</label
+                ><input
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter password"
+                  type="password"
+                />
+              </div>
+              <div class="checkbox">
+                <label
+                  ><input checked="" type="checkbox" value="" />Remember
+                  me</label
+                >
+              </div>
+              <button class="btn btn-primary btn-block">
+                <span class="glyphicon glyphicon-off"></span>
+                Login
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>Not a member? <a href="#">Sign Up</a></p>
+            <p>Forgot <a href="#">Password?</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
