@@ -1,8 +1,7 @@
 @import "loading.css";
 @import "bootstrap.min.css";
 @import "_bootswatch.scss";
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html,
 body {
   max-width: 100%;
@@ -73,9 +72,20 @@ li.step {
     margin-top: 50px;
   }
 }
+
+@media (min-width: 1000px) {
+  #form-config2 {
+    margin-left: 50px;
+  }
+}
+
 .btn-view {
   background-color: #008cba;
   color: white;
 }
 .btn-edit {
+}
+
+.card-action{
+  width: 120px !important;
 }
